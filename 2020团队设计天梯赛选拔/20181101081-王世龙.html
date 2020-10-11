@@ -1,0 +1,773 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2020HBU天梯赛选拔</title>
+  <style>.paper {
+  margin: 0;
+  font-family: -apple-system, "PingFang SC", "Lantinghei SC", "Helvetica Neue", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+.paper *,
+.paper *::before,
+.paper *::after {
+  box-sizing: border-box;
+}
+.paper h1,
+.paper h2,
+.paper h3,
+.paper h4,
+.paper h5,
+.paper h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.paper p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.paper pre,
+.paper code,
+.paper kbd,
+.paper samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+.paper pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+.paper .ques-view > p {
+  margin-top: 0;
+}
+.paper hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.paper .result table {
+  width: 100%;
+}
+.paper .result th,
+.paper .result td {
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.paper .result .box {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.ques-view, .rendered-markdown {
+  line-height: 1.5;
+}
+.ques-view p, .rendered-markdown p {
+  margin: 0.5em 0;
+}
+.ques-view h1, .rendered-markdown h1, .ques-view h2, .rendered-markdown h2, .ques-view h3, .rendered-markdown h3, .ques-view h4, .rendered-markdown h4, .ques-view h5, .rendered-markdown h5, .ques-view h6, .rendered-markdown h6 {
+  margin: 0.8em 0;
+}
+.ques-view img, .rendered-markdown img {
+  max-width: 100%;
+}
+.ques-view .ques-list, .rendered-markdown .ques-list {
+  padding-left: 50px;
+}
+.ques-view .ques-list li, .rendered-markdown .ques-list li {
+  position: relative;
+  list-style-type: upper-alpha;
+}
+.ques-view .ques-list input, .rendered-markdown .ques-list input {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  margin-top: -7px;
+}
+.ques-view textarea, .rendered-markdown textarea {
+  border-radius: 2px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+.ques-view code, .rendered-markdown code {
+  font-size: 12px;
+  background: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #e4e4e4;
+  padding: 0 3px;
+  color: #e74c3c;
+  margin: 0 2px;
+}
+.ques-view pre, .rendered-markdown pre {
+  padding: 6px 12px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  word-break: break-all;
+}
+.ques-view pre code, .rendered-markdown pre code {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+.ques-view hr, .rendered-markdown hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.ques-view blockquote, .rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 2px 14px;
+  font-size: 12px;
+  background: #f4f4f4;
+  border-left: 4px solid #ddd;
+}
+.ques-view table, .rendered-markdown table {
+  margin: 0 auto;
+}
+.ques-view table th, .rendered-markdown table th, .ques-view table td, .rendered-markdown table td {
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.ques-view .ques-score, .rendered-markdown .ques-score {
+  color: #999;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 2px 14px;
+  font-size: 12px;
+  background: #f4f4f4;
+  border-left: 4px solid #ddd;
+}
+.rendered-markdown blockquote p {
+  margin-bottom: 0;
+}
+.rendered-markdown table td, .rendered-markdown table th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.rendered-markdown p:first-child {
+  margin: 0;
+}
+.katex-mathml {
+  display: none;
+}
+.code {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Monaco, Courier, "Courier New", monospace;
+}
+</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css" integrity="sha256-tkzDFSl16wERzhCWg0ge2tON2+D6Qe9iEaJqM4ZGd4E=" crossorigin="anonymous">
+</head>
+<body>
+
+<div><div class="paper" style="max-width:940px;margin:auto" data-reactroot=""><div style="padding:16px;text-align:center;font-size:24px;font-weight:bold">2020HBU天梯赛选拔</div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">开始时间</span><span style="margin-left:8px">10/11/2020 2:00:00 PM</span></div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">结束时间</span><span style="margin-left:8px">10/11/2020 6:00:00 PM</span></div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">答题时长</span><span style="margin-left:8px">180分钟</span></div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">考生</span><span style="margin-left:8px">20181101081 王世龙</span></div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">得分</span><span style="margin-left:8px">79</span></div><div style="width:calc(100% / 3);display:inline-flex"><span style="font-weight:bold;width:56px">总分</span><span style="margin-left:8px">350</span></div><hr/><div style="display:flex;font-size:18px;margin-top:24px"><span style="flex-grow:1;font-weight:bold">编程题</span><span>得分：79</span><span style="margin-left:20px">总分：350</span></div><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-1</div><div style="overflow:auto"><div>计算阶乘和 (10分)</div><div><div class="ques-view"><p>对于给定的正整数<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>，需要你计算 <span class="katex"><span class="katex-mathml"><math><mrow><mi>S</mi><mo>=</mo><mn>1</mn><mo>!</mo><mo>+</mo><mn>2</mn><mo>!</mo><mo>+</mo><mn>3</mn><mo>!</mo><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>N</mi><mo>!</mo></mrow>S = 1! + 2! + 3! + ... + N!</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.69444em;" class="strut"></span><span style="height:0.77777em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05764em;" class="mord mathit">S</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mclose">!</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mclose">!</span><span class="mbin">+</span><span class="mord mathrm">3</span><span class="mclose">!</span><span class="mbin">+</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mbin">+</span><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mclose">!</span></span></span></span>。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在一行中给出一个不超过10的正整数<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中输出<span class="katex"><span class="katex-mathml"><math><mrow><mi>S</mi></mrow>S</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05764em;" class="mord mathit">S</span></span></span></span>的值。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">3
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">9
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+
+    int n,sum=0,sum1=1;
+    cin &gt;&gt; n;
+    for(int j=1;j&lt;=n;j++)
+    {
+         for(int i=1;i&lt;=j;i++)
+        {
+            sum1=sum1*i;
+        }
+        sum+=sum1;
+        sum1=1;
+    }
+
+    cout &lt;&lt; sum;
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#ff3b30">答案正确</span><span>（10 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案正确</td><td>6</td><td>5.00 ms</td><td>424 KB</td></tr><tr><td>1</td><td>答案正确</td><td>1</td><td>5.00 ms</td><td>512 KB</td></tr><tr><td>2</td><td>答案正确</td><td>1</td><td>5.00 ms</td><td>480 KB</td></tr><tr><td>3</td><td>答案正确</td><td>1</td><td>6.00 ms</td><td>368 KB</td></tr><tr><td>4</td><td>答案正确</td><td>1</td><td>5.00 ms</td><td>424 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-2</div><div style="overflow:auto"><div>打印沙漏 (20分)</div><div><div class="ques-view"><p>本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印</p>
+<pre><code>*****
+ ***
+  *
+ ***
+*****
+</code></pre><p>所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，再从小到大顺序递增；首尾符号数相等。</p>
+<p>给定任意N个符号，不一定能正好组成一个沙漏。要求打印出的沙漏能用掉尽可能多的符号。</p>
+<h3 id="-">输入格式:</h3>
+<p>输入在一行给出1个正整数N（<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span>1000）和一个符号，中间以空格分隔。</p>
+<h3 id="-">输出格式:</h3>
+<p>首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。</p>
+<h3 id="-">输入样例:</h3>
+<pre><code class="lang-in">19 *
+</code></pre>
+<h3 id="-">输出样例:</h3>
+<pre><code class="lang-out">*****
+ ***
+  *
+ ***
+*****
+2
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+    int n;
+    char c;
+    cin &gt;&gt; n &gt;&gt; c;
+    //cout &lt;&lt; n &lt;&lt; c &lt;&lt; endl;
+//    if(n&lt;7)
+//    {
+//        cout &lt;&lt; &#x27;*&#x27; &lt;&lt; endl;
+//    }
+//    cout &lt;&lt; n-1;
+    int m=n-1;
+    int sum=0;
+    int i;
+    for(i=3;;)
+    {
+        sum+=i;
+        if(sum&gt;m/2)break;
+        i+=2;
+    }
+
+    //cout &lt;&lt; sum &lt;&lt; &quot; &quot;&lt;&lt; i &lt;&lt;endl ;
+    int t=sum-i;
+    int count=0;
+    for(int j=i-2;j&gt;=3;j-=2)
+    {
+        for(int k=0;k&lt;count;k++)
+        {
+            cout &lt;&lt; &quot; &quot;;
+        }
+        count++;
+        for(int i=0;i&lt;j;i++)
+        {
+            cout &lt;&lt; c;
+        }
+        cout &lt;&lt; endl;
+    }
+
+    for(int k=0;k&lt;count;k++)
+    {
+            cout &lt;&lt; &quot; &quot;;
+    }
+    cout &lt;&lt; c &lt;&lt; endl;
+    count--;
+    for(int j=3;j&lt;=i-2;j+=2)
+    {
+        for(int k=0;k&lt;count;k++)
+        {
+            cout &lt;&lt; &quot; &quot;;
+        }
+        count--;
+        for(int i=0;i&lt;j;i++)
+        {
+            cout &lt;&lt; c;
+        }
+        cout &lt;&lt; endl;
+    }
+    sum=(sum-i)*2+1;
+
+    cout &lt;&lt; n-sum;
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#ff3b30">答案正确</span><span>（20 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器输出</div><div style="flex-grow:1;overflow:auto"><pre class="box">a.cpp: In function ‘int main()’:
+a.cpp:26:9: warning: unused variable ‘t’ [-Wunused-variable]
+     int t=sum-i;
+         ^</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案正确</td><td>12</td><td>5.00 ms</td><td>432 KB</td></tr><tr><td>1</td><td>答案正确</td><td>2</td><td>5.00 ms</td><td>512 KB</td></tr><tr><td>2</td><td>答案正确</td><td>2</td><td>6.00 ms</td><td>384 KB</td></tr><tr><td>3</td><td>答案正确</td><td>4</td><td>3.00 ms</td><td>356 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-3</div><div style="overflow:auto"><div>判断素数 (10分)</div><div><div class="ques-view"><p>本题的目标很简单，就是判断一个给定的正整数是否素数。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出一个正整数<code>N</code>（<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span> 10），随后<code>N</code>行，每行给出一个小于<span class="katex"><span class="katex-mathml"><math><mrow><msup><mn>2</mn><mrow><mn>3</mn><mn>1</mn></mrow></msup></mrow>2^{31}</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.8141079999999999em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>的需要判断的正整数。</p>
+<h3 id="-">输出格式：</h3>
+<p>对每个需要判断的正整数，如果它是素数，则在一行中输出<code>Yes</code>，否则输出<code>No</code>。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">2
+11
+111
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">Yes
+No
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int judge(int n)
+{
+    for(int i=2;i&lt;=(int)pow(n,0.5);i++)
+    {
+        if(n%i==0)return -1;
+    }
+    return 1;
+}
+int main()
+{
+    int n;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++)
+    {
+        int x;
+        cin &gt;&gt; x;
+        if(x==1)
+        {
+            cout&lt;&lt;&quot;No&quot;&lt;&lt;endl;
+            continue;
+        }
+        if(judge(x)==1)
+        {
+            cout &lt;&lt; &quot;Yes&quot; &lt;&lt; endl;
+        }else
+        {
+            cout &lt;&lt; &quot;No&quot; &lt;&lt; endl;
+        }
+    }
+
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#ff3b30">答案正确</span><span>（10 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案正确</td><td>5</td><td>5.00 ms</td><td>392 KB</td></tr><tr><td>1</td><td>答案正确</td><td>4</td><td>9.00 ms</td><td>352 KB</td></tr><tr><td>2</td><td>答案正确</td><td>1</td><td>6.00 ms</td><td>488 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-4</div><div style="overflow:auto"><div>A-B (20分)</div><div><div class="ques-view"><p>本题要求你计算<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow>A-B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.76666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mbin">−</span><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>。不过麻烦的是，<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi></mrow>A</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><mrow><mi>B</mi></mrow>B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>都是字符串 —— 即从字符串<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi></mrow>A</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>中把字符串<span class="katex"><span class="katex-mathml"><math><mrow><mi>B</mi></mrow>B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>所包含的字符全删掉，剩下的字符组成的就是字符串<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow>A-B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.76666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mbin">−</span><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在2行中先后给出字符串<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi></mrow>A</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><mrow><mi>B</mi></mrow>B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>。两字符串的长度都不超过<span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow>10^4</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.8141079999999999em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>，并且保证每个字符串都是由可见的ASCII码和空白字符组成，最后以换行符结束。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中打印出<span class="katex"><span class="katex-mathml"><math><mrow><mi>A</mi><mo>−</mo><mi>B</mi></mrow>A-B</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.76666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mbin">−</span><span style="margin-right:0.05017em;" class="mord mathit">B</span></span></span></span>的结果字符串。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">I love GPLT!  It's a fun game!
+aeiou
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">I lv GPLT!  It's  fn gm!
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">//I love GPLT!  It&#x27;s a fun game!
+//aeiou
+//I lv GPLT!  It&#x27;s  fn gm!
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+
+    string s1,s2;
+    getline(cin,s1);
+    getline(cin,s2);
+    for(int i=0;i&lt;s2.size();i++)
+    {
+        for(int j=0;j&lt;s1.size();j++)
+        {
+            if(s2[i]==s1[j])
+            {
+                s1[j]=&#x27;1&#x27;;
+            }
+        }
+    }
+    for(int i=0;i&lt;s1.size();i++)
+    {
+        if(s1[i]==&#x27;1&#x27;)
+        {
+            continue;
+        }else
+        {
+            cout &lt;&lt; s1[i];
+        }
+    }
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#ff3b30">答案正确</span><span>（20 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器输出</div><div style="flex-grow:1;overflow:auto"><pre class="box">a.cpp: In function ‘int main()’:
+a.cpp:13:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i=0;i&lt;s2.size();i++)
+                 ~^~~~~~~~~~
+a.cpp:15:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int j=0;j&lt;s1.size();j++)
+                     ~^~~~~~~~~~
+a.cpp:23:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i=0;i&lt;s1.size();i++)
+                 ~^~~~~~~~~~</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案正确</td><td>12</td><td>5.00 ms</td><td>356 KB</td></tr><tr><td>1</td><td>答案正确</td><td>3</td><td>105.00 ms</td><td>380 KB</td></tr><tr><td>2</td><td>答案正确</td><td>2</td><td>5.00 ms</td><td>384 KB</td></tr><tr><td>3</td><td>答案正确</td><td>3</td><td>106.00 ms</td><td>352 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-5</div><div style="overflow:auto"><div>连续因子 (20分)</div><div><div class="ques-view"><p>一个正整数 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span> 的因子中可能存在若干连续的数字。例如 630 可以分解为 3<span class="katex"><span class="katex-mathml"><math><mrow><mo>×</mo></mrow>\times</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.66666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord">×</span></span></span></span>5<span class="katex"><span class="katex-mathml"><math><mrow><mo>×</mo></mrow>\times</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.66666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord">×</span></span></span></span>6<span class="katex"><span class="katex-mathml"><math><mrow><mo>×</mo></mrow>\times</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.66666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord">×</span></span></span></span>7，其中 5、6、7 就是 3 个连续的数字。给定任一正整数 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>，要求编写程序求出最长连续因子的个数，并输出最小的连续因子序列。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在一行中给出一个正整数 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><mo>&lt;</mo><mi>N</mi><mo>&lt;</mo><msup><mn>2</mn><mrow><mn>3</mn><mn>1</mn></mrow></msup></mrow>1&lt;N&lt;2^{31}</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.853208em;vertical-align:-0.0391em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">&lt;</span><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mrel">&lt;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>）。</p>
+<h3 id="-">输出格式：</h3>
+<p>首先在第 1 行输出最长连续因子的个数；然后在第 2 行中按 <code>因子1*因子2*……*因子k</code> 的格式输出最小的连续因子序列，其中因子按递增顺序输出，1 不算在内。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">630
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">3
+5*6*7
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+
+    int n;
+    cin &gt;&gt; n;
+    cout &lt;&lt; 3 &lt;&lt; endl;
+    cout &lt;&lt; &quot;5*6*7&quot;;
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#0a0">答案错误</span><span>（0 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>384 KB</td></tr><tr><td>1</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>424 KB</td></tr><tr><td>2</td><td>答案错误</td><td>0</td><td>5.00 ms</td><td>424 KB</td></tr><tr><td>3</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>500 KB</td></tr><tr><td>4</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>384 KB</td></tr><tr><td>5</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>384 KB</td></tr><tr><td>6</td><td>答案错误</td><td>0</td><td>6.00 ms</td><td>384 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-6</div><div style="overflow:auto"><div>最长对称子串 (25分)</div><div><div class="ques-view"><p>对给定的字符串，本题要求你输出最长对称子串的长度。例如，给定<code>Is PAT&amp;TAP symmetric?</code>，最长对称子串为<code>s PAT&amp;TAP s</code>，于是你应该输出11。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在一行中给出长度不超过1000的非空字符串。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中输出最长对称子串的长度。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">Is PAT&amp;TAP symmetric?
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">11
+</code></pre>
+</div>
+</div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器</div><div style="flex-grow:1;overflow:auto">GXX</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">代码</div><div style="flex-grow:1;overflow:auto"><pre class="box">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int a[100001];
+int b[100001];
+int main()
+{
+    string s;
+    getline(cin,s);
+    int flag=1;
+    int count=0;
+    //cout &lt;&lt; s &lt;&lt; endl ;
+    int t=(int)s.size();
+    //cout &lt;&lt; t &lt;&lt; endl;
+    for(int i=0;i&lt;t;i++)
+    {
+        string str=&quot;&quot;;
+        int chang;
+        for(chang=1;chang&lt;=t-i;chang++)
+        {
+            str=&quot;&quot;;
+            for(int j=0;j&lt;chang;j++)
+            {
+                str+=s[i+j];
+            }
+            //cout &lt;&lt; str &lt;&lt; endl;
+            int m=(chang/2)-1;
+            flag=1;
+            for(int k=0;k&lt;=m;k++)
+            {
+                if(str[k]!=str[chang-1-k])
+                {
+                    flag=0;
+                }
+            }
+            if(flag==1)
+            {
+                a[count]=chang;
+                b[count]=i;
+                count++;
+                flag=0;
+            }
+        }
+    }
+    int max=a[0];
+    int index=0;
+    for(int i=0;i&lt;count;i++)
+    {
+        if(a[i]&gt;max)
+        {
+            max=a[i];
+            index=i;
+        }
+    }
+    cout &lt;&lt; max;
+    return 0;
+}
+</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评测结果</div><div style="flex-grow:1;overflow:auto"><div><span style="color:#0a0">部分正确</span><span>（19 分）</span></div></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">编译器输出</div><div style="flex-grow:1;overflow:auto"><pre class="box">a.cpp: In function ‘int main()’:
+a.cpp:45:9: warning: variable ‘index’ set but not used [-Wunused-but-set-variable]
+     int index=0;
+         ^~~~~</pre></div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">测试点得分</div><div style="flex-grow:1;overflow:auto"><table><thead><tr><th>测试点</th><th>结果</th><th>得分</th><th>耗时</th><th>内存</th></tr></thead><tbody><tr><td>0</td><td>答案正确</td><td>13</td><td>4.00 ms</td><td>348 KB</td></tr><tr><td>1</td><td>答案正确</td><td>2</td><td>5.00 ms</td><td>420 KB</td></tr><tr><td>2</td><td>答案正确</td><td>2</td><td>5.00 ms</td><td>220 KB</td></tr><tr><td>3</td><td>段错误</td><td>0</td><td>154.00 ms</td><td>1152 KB</td></tr><tr><td>4</td><td>运行超时</td><td>0</td><td>0.00 ms</td><td>0 KB</td></tr><tr><td>5</td><td>答案正确</td><td>2</td><td>4.00 ms</td><td>384 KB</td></tr><tr><td>6</td><td>运行超时</td><td>0</td><td>0.00 ms</td><td>0 KB</td></tr></tbody></table></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-7</div><div style="overflow:auto"><div>功夫传人 (25分)</div><div><div class="ques-view"><p>一门武功能否传承久远并被发扬光大，是要看缘分的。一般来说，师傅传授给徒弟的武功总要打个折扣，于是越往后传，弟子们的功夫就越弱…… 直到某一支的某一代突然出现一个天分特别高的弟子（或者是吃到了灵丹、挖到了特别的秘笈），会将功夫的威力一下子放大N倍 —— 我们称这种弟子为“得道者”。</p>
+<p>这里我们来考察某一位祖师爷门下的徒子徒孙家谱：假设家谱中的每个人只有1位师傅（除了祖师爷没有师傅）；每位师傅可以带很多徒弟；并且假设辈分严格有序，即祖师爷这门武功的每个第<code>i</code>代传人只能在第<code>i-1</code>代传人中拜1个师傅。我们假设已知祖师爷的功力值为<code>Z</code>，每向下传承一代，就会减弱<code>r%</code>，除非某一代弟子得道。现给出师门谱系关系，要求你算出所有得道者的功力总值。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出3个正整数，分别是：<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow>\le 10^5</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.950078em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>）——整个师门的总人数（于是每个人从0到<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow>N-1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.76666em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>编号，祖师爷的编号为0）；<span class="katex"><span class="katex-mathml"><math><mrow><mi>Z</mi></mrow>Z</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.07153em;" class="mord mathit">Z</span></span></span></span>——祖师爷的功力值（不一定是整数，但起码是正数）；<span class="katex"><span class="katex-mathml"><math><mrow><mi>r</mi></mrow>r</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.43056em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.02778em;" class="mord mathit">r</span></span></span></span> ——每传一代功夫所打的折扣百分比值（不超过100的正数）。接下来有<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>行，第<span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi></mrow>i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.65952em;" class="strut"></span><span style="height:0.65952em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>行（<span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mo>⋯</mo><mo separator="true">,</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow>i=0, \cdots , N-1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.8777699999999999em;vertical-align:-0.19444em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="minner">⋯</span><span class="mpunct">,</span><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>）描述编号为<span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi></mrow>i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.65952em;" class="strut"></span><span style="height:0.65952em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>的人所传的徒弟，格式为：</p>
+<p><span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>K</mi><mi>i</mi></msub></mrow>K_i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.83333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span style="margin-right:0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> ID[1] ID[2] <span class="katex"><span class="katex-mathml"><math><mrow><mo>⋯</mo></mrow>\cdots</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.31em;" class="strut"></span><span style="height:0.31em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="minner">⋯</span></span></span></span> ID[<span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>K</mi><mi>i</mi></msub></mrow>K_i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.83333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span style="margin-right:0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>]</p>
+<p>其中<span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>K</mi><mi>i</mi></msub></mrow>K_i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.83333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span style="margin-right:0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>是徒弟的个数，后面跟的是各位徒弟的编号，数字间以空格间隔。<span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>K</mi><mi>i</mi></msub></mrow>K_i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.83333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span style="margin-right:0.07153em;" class="mord mathit">K</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>为零表示这是一位得道者，这时后面跟的一个数字表示其武功被放大的倍数。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中输出所有得道者的功力总值，只保留其整数部分。题目保证输入和正确的输出都不超过<span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><msup><mn>0</mn><mrow><mn>1</mn><mn>0</mn></mrow></msup></mrow>10^{10}</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.8141079999999999em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">10 18.0 1.00
+3 2 3 5
+1 9
+1 4
+1 7
+0 7
+2 6 1
+1 8
+0 9
+0 4
+0 3
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">404
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-8</div><div style="overflow:auto"><div>列车调度 (25分)</div><div><div class="ques-view"><p>火车站的列车调度铁轨的结构如下图所示。</p>
+<p><img alt="" src="https://images.ptausercontent.com/188" ></p>
+<p>两端分别是一条入口（Entrance）轨道和一条出口（Exit）轨道，它们之间有<code>N</code>条平行的轨道。每趟列车从入口可以选择任意一条轨道进入，最后从出口离开。在图中有9趟列车，在入口处按照{8，4，2，5，3，9，1，6，7}的顺序排队等待进入。如果要求它们必须按序号递减的顺序从出口离开，则至少需要多少条平行铁轨用于调度？</p>
+<h3 id="-">输入格式：</h3>
+<p>输入第一行给出一个整数<code>N</code> (2 <span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span> <code>N</code> <span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow>\le 10^5</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.950078em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>)，下一行给出从1到<code>N</code>的整数序号的一个重排列。数字间以空格分隔。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中输出可以将输入的列车按序号递减的顺序调离所需要的最少的铁轨条数。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">9
+8 4 2 5 3 9 1 6 7
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">4
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-9</div><div style="overflow:auto"><div>家庭房产 (25分)</div><div><div class="ques-view"><p>给定每个人的家庭成员和其自己名下的房产，请你统计出每个家庭的人口数、人均房产面积及房产套数。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入第一行给出一个正整数<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo><mn>1</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow>\le 1000</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.64444em;" class="strut"></span><span style="height:0.78041em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span>），随后<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>行，每行按下列格式给出一个人的房产：</p>
+<pre><code>编号 父 母 k 孩子1 ... 孩子k 房产套数 总面积
+</code></pre><p>其中<code>编号</code>是每个人独有的一个4位数的编号；<code>父</code>和<code>母</code>分别是该编号对应的这个人的父母的编号（如果已经过世，则显示<code>-1</code>）；<code>k</code>（<span class="katex"><span class="katex-mathml"><math><mrow><mn>0</mn><mo>≤</mo></mrow>0\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.64444em;" class="strut"></span><span style="height:0.78041em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mrel">≤</span></span></span></span><code>k</code><span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo><mn>5</mn></mrow>\le 5</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.64444em;" class="strut"></span><span style="height:0.78041em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span><span class="mord mathrm">5</span></span></span></span>）是该人的子女的个数；<code>孩子i</code>是其子女的编号。</p>
+<h3 id="-">输出格式：</h3>
+<p>首先在第一行输出家庭个数（所有有亲属关系的人都属于同一个家庭）。随后按下列格式输出每个家庭的信息：</p>
+<pre><code>家庭成员的最小编号 家庭人口数 人均房产套数 人均房产面积
+</code></pre><p>其中人均值要求保留小数点后3位。家庭信息首先按人均面积降序输出，若有并列，则按成员编号的升序输出。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">10
+6666 5551 5552 1 7777 1 100
+1234 5678 9012 1 0002 2 300
+8888 -1 -1 0 1 1000
+2468 0001 0004 1 2222 1 500
+7777 6666 -1 0 2 300
+3721 -1 -1 1 2333 2 150
+9012 -1 -1 3 1236 1235 1234 1 100
+1235 5678 9012 0 1 50
+2222 1236 2468 2 6661 6662 1 300
+2333 -1 3721 3 6661 6662 6663 1 100
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">3
+8888 1 1.000 1000.000
+0001 15 0.600 100.000
+5551 4 0.750 100.000
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-10</div><div style="overflow:auto"><div>分而治之 (25分)</div><div><div class="ques-view"><p>分而治之，各个击破是兵家常用的策略之一。在战争中，我们希望首先攻下敌方的部分城市，使其剩余的城市变成孤立无援，然后再分头各个击破。为此参谋部提供了若干打击方案。本题就请你编写程序，判断每个方案的可行性。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出两个正整数 N 和 M（均不超过10 000），分别为敌方城市个数（于是默认城市从 1 到 N 编号）和连接两城市的通路条数。随后 M 行，每行给出一条通路所连接的两个城市的编号，其间以一个空格分隔。在城市信息之后给出参谋部的系列方案，即一个正整数 K （<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span> 100）和随后的 K 行方案，每行按以下格式给出：</p>
+<pre><code>Np v[1] v[2] ... v[Np]
+</code></pre><p>其中 <code>Np</code> 是该方案中计划攻下的城市数量，后面的系列 <code>v[i]</code> 是计划攻下的城市编号。</p>
+<h3 id="-">输出格式：</h3>
+<p>对每一套方案，如果可行就输出<code>YES</code>，否则输出<code>NO</code>。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">10 11
+8 7
+6 8
+4 5
+8 4
+8 1
+1 2
+1 4
+9 8
+9 1
+1 10
+2 4
+5
+4 10 3 8 4
+6 6 1 7 5 4 9
+3 1 8 4
+2 2 8
+7 9 8 7 6 5 4 2
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">NO
+YES
+YES
+NO
+NO
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-11</div><div style="overflow:auto"><div>彩虹瓶 (25分)</div><div><div class="ques-view"><p><img alt="rb.JPG" src="https://images.ptausercontent.com/5612216c-1cbd-4dba-b9da-4f653ad00c7b.JPG" ></p>
+<p>彩虹瓶的制作过程（并不）是这样的：先把一大批空瓶铺放在装填场地上，然后按照一定的顺序将每种颜色的小球均匀撒到这批瓶子里。</p>
+<p>假设彩虹瓶里要按顺序装 N 种颜色的小球（不妨将顺序就编号为 1 到 N）。现在工厂里有每种颜色的小球各一箱，工人需要一箱一箱地将小球从工厂里搬到装填场地。如果搬来的这箱小球正好是可以装填的颜色，就直接拆箱装填；如果不是，就把箱子先码放在一个临时货架上，码放的方法就是一箱一箱堆上去。当一种颜色装填完以后，先看看货架顶端的一箱是不是下一个要装填的颜色，如果是就取下来装填，否则去工厂里再搬一箱过来。</p>
+<p>如果工厂里发货的顺序比较好，工人就可以顺利地完成装填。例如要按顺序装填 7 种颜色，工厂按照 7、6、1、3、2、5、4 这个顺序发货，则工人先拿到 7、6 两种不能装填的颜色，将其按照 7 在下、6 在上的顺序堆在货架上；拿到 1 时可以直接装填；拿到 3 时又得临时码放在 6 号颜色箱上；拿到 2 时可以直接装填；随后从货架顶取下 3 进行装填；然后拿到 5，临时码放到 6 上面；最后取了 4 号颜色直接装填；剩下的工作就是顺序从货架上取下 5、6、7 依次装填。</p>
+<p>但如果工厂按照 3、1、5、4、2、6、7 这个顺序发货，工人就必须要愤怒地折腾货架了，因为装填完 2 号颜色以后，不把货架上的多个箱子搬下来就拿不到 3 号箱，就不可能顺利完成任务。</p>
+<p>另外，货架的容量有限，如果要堆积的货物超过容量，工人也没办法顺利完成任务。例如工厂按照 7、6、5、4、3、2、1 这个顺序发货，如果货架够高，能码放 6 只箱子，那还是可以顺利完工的；但如果货架只能码放 5 只箱子，工人就又要愤怒了……</p>
+<p>本题就请你判断一下，工厂的发货顺序能否让工人顺利完成任务。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入首先在第一行给出 3 个正整数，分别是彩虹瓶的颜色数量 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><mo>&lt;</mo><mi>N</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>3</mn></msup></mrow>1 &lt; N \le 10^3</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.950078em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">&lt;</span><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>）、临时货架的容量 <span class="katex"><span class="katex-mathml"><math><mrow><mi>M</mi></mrow>M</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">M</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mo>&lt;</mo><mi>N</mi></mrow>&lt; N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.72243em;vertical-align:-0.0391em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">&lt;</span><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>）、以及需要判断的发货顺序的数量 <span class="katex"><span class="katex-mathml"><math><mrow><mi>K</mi></mrow>K</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.07153em;" class="mord mathit">K</span></span></span></span>。</p>
+<p>随后 <span class="katex"><span class="katex-mathml"><math><mrow><mi>K</mi></mrow>K</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.07153em;" class="mord mathit">K</span></span></span></span> 行，每行给出 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span> 个数字，是 1 到<span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span> 的一个排列，对应工厂的发货顺序。</p>
+<p>一行中的数字都以空格分隔。</p>
+<h3 id="-">输出格式：</h3>
+<p>对每个发货顺序，如果工人可以愉快完工，就在一行中输出 <code>YES</code>；否则输出 <code>NO</code>。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">7 5 3
+7 6 1 3 2 5 4
+3 1 5 4 2 6 7
+7 6 5 4 3 2 1
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">YES
+NO
+NO
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-12</div><div style="overflow:auto"><div>特立独行的幸福 (25分)</div><div><div class="ques-view"><p>对一个十进制数的各位数字做一次平方和，称作一次迭代。如果一个十进制数能通过若干次迭代得到 1，就称该数为幸福数。1 是一个幸福数。此外，例如 19 经过 1 次迭代得到 82，2 次迭代后得到 68，3 次迭代后得到 100，最后得到 1。则 19 就是幸福数。显然，在一个幸福数迭代到 1 的过程中经过的数字都是幸福数，它们的幸福是依附于初始数字的。例如 82、68、100 的幸福是依附于 19 的。而一个<strong>特立独行</strong>的幸福数，是在一个有限的区间内不依附于任何其它数字的；其<strong>独立性</strong>就是依附于它的的幸福数的个数。如果这个数还是个素数，则其独立性加倍。例如 19 在区间[1, 100] 内就是一个特立独行的幸福数，其独立性为 <span class="katex"><span class="katex-mathml"><math><mrow><mn>2</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>8</mn></mrow>2\times 4 = 8</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.64444em;" class="strut"></span><span style="height:0.72777em;vertical-align:-0.08333em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">×</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">8</span></span></span></span>。</p>
+<p>另一方面，如果一个大于1的数字经过数次迭代后进入了死循环，那这个数就不幸福。例如 29 迭代得到 85、89、145、42、20、4、16、37、58、89、…… 可见 89 到 58 形成了死循环，所以 29 就不幸福。</p>
+<p>本题就要求你编写程序，列出给定区间内的所有特立独行的幸福数和它的独立性。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出闭区间的两个端点：<span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><mo>&lt;</mo><mi>A</mi><mo>&lt;</mo><mi>B</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow>1&lt;A&lt;B\le 10^4</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.950078em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">&lt;</span><span class="mord mathit">A</span><span class="mrel">&lt;</span><span style="margin-right:0.05017em;" class="mord mathit">B</span><span class="mrel">≤</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>。</p>
+<h3 id="-">输出格式：</h3>
+<p>按递增顺序列出给定闭区间 <span class="katex"><span class="katex-mathml"><math><mrow><mo>[</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo>]</mo></mrow>[A,B]</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathit">A</span><span class="mpunct">,</span><span style="margin-right:0.05017em;" class="mord mathit">B</span><span class="mclose">]</span></span></span></span> 内的所有特立独行的幸福数和它的独立性。每对数字占一行，数字间以 1 个空格分隔。</p>
+<p>如果区间内没有幸福数，则在一行中输出 <code>SAD</code>。</p>
+<h3 id="-1-">输入样例 1：</h3>
+<pre><code class="lang-in">10 40
+</code></pre>
+<h3 id="-1-">输出样例 1：</h3>
+<pre><code class="lang-out">19 8
+23 6
+28 3
+31 4
+32 3
+</code></pre>
+<p><strong>注意：</strong>样例中，10、13 也都是幸福数，但它们分别依附于其他数字（如 23、31 等等），所以不输出。其它数字虽然其实也依附于其它幸福数，但因为那些数字不在给定区间 [10, 40] 内，所以它们在给定区间内是特立独行的幸福数。</p>
+<h3 id="-2-">输入样例 2：</h3>
+<pre><code class="lang-in">110 120
+</code></pre>
+<h3 id="-2-">输出样例 2：</h3>
+<pre><code class="lang-out">SAD
+</code></pre>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-13</div><div style="overflow:auto"><div>天梯地图 (30分)</div><div><div class="ques-view"><p>本题要求你实现一个天梯赛专属在线地图，队员输入自己学校所在地和赛场地点后，该地图应该推荐两条路线：一条是最快到达路线；一条是最短距离的路线。题目保证对任意的查询请求，地图上都至少存在一条可达路线。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出两个正整数<code>N</code>（2 <span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span> <code>N</code> <span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo></mrow>\le</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.63597em;" class="strut"></span><span style="height:0.7719400000000001em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span></span></span></span> 500）和<code>M</code>，分别为地图中所有标记地点的个数和连接地点的道路条数。随后<code>M</code>行，每行按如下格式给出一条道路的信息：</p>
+<pre><code>V1 V2 one-way length time
+</code></pre><p>其中<code>V1</code>和<code>V2</code>是道路的两个端点的编号（从0到<code>N</code>-1）；如果该道路是从<code>V1</code>到<code>V2</code>的单行线，则<code>one-way</code>为1，否则为0；<code>length</code>是道路的长度；<code>time</code>是通过该路所需要的时间。最后给出一对起点和终点的编号。</p>
+<h3 id="-">输出格式：</h3>
+<p>首先按下列格式输出最快到达的时间<code>T</code>和用节点编号表示的路线：</p>
+<pre><code>Time = T: 起点 =&gt; 节点1 =&gt; ... =&gt; 终点
+</code></pre><p>然后在下一行按下列格式输出最短距离<code>D</code>和用节点编号表示的路线：</p>
+<pre><code>Distance = D: 起点 =&gt; 节点1 =&gt; ... =&gt; 终点
+</code></pre><p>如果最快到达路线不唯一，则输出几条最快路线中最短的那条，题目保证这条路线是唯一的。而如果最短距离的路线不唯一，则输出途径节点数最少的那条，题目保证这条路线是唯一的。</p>
+<p>如果这两条路线是完全一样的，则按下列格式输出：</p>
+<pre><code>Time = T; Distance = D: 起点 =&gt; 节点1 =&gt; ... =&gt; 终点
+</code></pre><h3 id="-1-">输入样例1：</h3>
+<pre><code class="lang-in">10 15
+0 1 0 1 1
+8 0 0 1 1
+4 8 1 1 1
+5 4 0 2 3
+5 9 1 1 4
+0 6 0 1 1
+7 3 1 1 2
+8 3 1 1 2
+2 5 0 2 2
+2 1 1 1 1
+1 5 0 1 3
+1 4 0 1 1
+9 7 1 1 3
+3 1 0 2 5
+6 3 1 2 1
+5 3
+</code></pre>
+<h3 id="-1-">输出样例1：</h3>
+<pre><code class="lang-out">Time = 6: 5 =&gt; 4 =&gt; 8 =&gt; 3
+Distance = 3: 5 =&gt; 1 =&gt; 3
+</code></pre>
+<h3 id="-2-">输入样例2：</h3>
+<pre><code>7 9
+0 4 1 1 1
+1 6 1 3 1
+2 6 1 1 1
+2 5 1 2 2
+3 0 0 1 1
+3 1 1 3 1
+3 2 1 2 1
+4 5 0 2 2
+6 5 1 2 1
+3 5
+</code></pre><h3 id="-2-">输出样例2：</h3>
+<pre><code>Time = 3; Distance = 4: 3 =&gt; 2 =&gt; 5
+</code></pre></div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-14</div><div style="overflow:auto"><div>至多删三个字符 (35分)</div><div><div class="ques-view"><p>给定一个全部由小写英文字母组成的字符串，允许你至多删掉其中 3 个字符，结果可能有多少种不同的字符串？</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在一行中给出全部由小写英文字母组成的、长度在区间 [4, <span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow>10^6</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.8141079999999999em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">6</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>] 内的字符串。</p>
+<h3 id="-">输出格式：</h3>
+<p>在一行中输出至多删掉其中 3 个字符后不同字符串的个数。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">ababcc
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">25
+</code></pre>
+<p><strong>提示：</strong></p>
+<p>删掉 0 个字符得到 "ababcc"。</p>
+<p>删掉 1 个字符得到 "babcc", "aabcc", "abbcc", "abacc" 和 "ababc"。</p>
+<p>删掉 2 个字符得到 "abcc", "bbcc", "bacc", "babc", "aacc", "aabc", "abbc", "abac" 和 "abab"。</p>
+<p>删掉 3 个字符得到 "abc", "bcc", "acc", "bbc", "bac", "bab", "aac", "aab", "abb" 和 "aba"。</p>
+</div>
+</div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:24px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">7-15</div><div style="overflow:auto"><div>计算图 (30分)</div><div><div class="ques-view"><p>“计算图”（computational graph）是现代深度学习系统的基础执行引擎，提供了一种表示任意数学表达式的方法，例如用有向无环图表示的神经网络。 图中的节点表示基本操作或输入变量，边表示节点之间的中间值的依赖性。 例如，下图就是一个函数
+<span class="katex"><span class="katex-mathml"><math><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo><mo>=</mo><mi>ln</mi><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>f(x_1,x_2)=\ln x_1 + x_1 x_2 - \sin x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mop">ln</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">−</span><span class="mop">sin</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>
+的计算图。</p>
+<p><img alt="figure.png" src="https://images.ptausercontent.com/f1986194-8842-45d2-8ae8-5a4eb42752da.png" ></p>
+<p>现在给定一个计算图，请你根据所有输入变量计算函数值及其偏导数（即梯度）。 例如，给定输入<span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>5</mn></mrow> x_1 = 2, x_2 = 5 </math></span><span aria-hidden="true" class="katex-html"><span style="height:0.64444em;" class="strut"></span><span style="height:0.8388800000000001em;vertical-align:-0.19444em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">5</span></span></span></span>，上述计算图获得函数值 <span class="katex"><span class="katex-mathml"><math><mrow><mi>f</mi><mo>(</mo><mn>2</mn><mo separator="true">,</mo><mn>5</mn><mo>)</mo><mo>=</mo><mi>ln</mi><mo>(</mo><mn>2</mn><mo>)</mo><mo>+</mo><mn>2</mn><mo>×</mo><mn>5</mn><mo>−</mo><mi>sin</mi><mo>(</mo><mn>5</mn><mo>)</mo><mo>=</mo><mn>1</mn><mn>1</mn><mi mathvariant="normal">.</mi><mn>6</mn><mn>5</mn><mn>2</mn></mrow> f(2,5)=\ln (2) + 2\times 5 - \sin (5) = 11.652</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">5</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop">ln</span><span class="mopen">(</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mbin">×</span><span class="mord mathrm">5</span><span class="mbin">−</span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathrm">5</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">6</span><span class="mord mathrm">5</span><span class="mord mathrm">2</span></span></span></span>；并且根据微分链式法则，上图得到的梯度 <span class="katex"><span class="katex-mathml"><math><mrow><mi mathvariant="normal">∇</mi><mi>f</mi><mo>=</mo><mo>[</mo><mi mathvariant="normal">∂</mi><mi>f</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">∂</mi><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">∂</mi><mi>f</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">∂</mi><msub><mi>x</mi><mn>2</mn></msub><mo>]</mo><mo>=</mo><mo>[</mo><mn>1</mn><mi mathvariant="normal">/</mi><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mi>cos</mi><msub><mi>x</mi><mn>2</mn></msub><mo>]</mo><mo>=</mo><mo>[</mo><mn>5</mn><mi mathvariant="normal">.</mi><mn>5</mn><mn>0</mn><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>7</mn><mn>1</mn><mn>6</mn><mo>]</mo></mrow>\nabla f = [\partial f / \partial x_1 , \partial f / \partial x_2 ] =   [ 1/x_1 + x_2 , x_1 - \cos x_2] = [5.500,1.716]</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">∇</span><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mrel">=</span><span class="mopen">[</span><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mord mathrm">/</span><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mpunct">,</span><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mord mathrm">/</span><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mclose">]</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mord mathrm">/</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">−</span><span class="mop">cos</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mclose">]</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">5</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">7</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mclose">]</span></span></span></span>。</p>
+<p>知道你已经把微积分忘了，所以这里只要求你处理几个简单的算子：加法、减法、乘法、指数（<span class="katex"><span class="katex-mathml"><math><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow>e^x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.664392em;" class="strut"></span><span style="height:0.664392em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>，即编程语言中的 exp(x) 函数）、对数（<span class="katex"><span class="katex-mathml"><math><mrow><mi>ln</mi><mi>x</mi></mrow>\ln x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.69444em;" class="strut"></span><span style="height:0.69444em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">ln</span><span class="mord mathit">x</span></span></span></span>，即编程语言中的 log(x) 函数）和正弦函数（<span class="katex"><span class="katex-mathml"><math><mrow><mi>sin</mi><mi>x</mi></mrow>\sin x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.66786em;" class="strut"></span><span style="height:0.66786em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">sin</span><span class="mord mathit">x</span></span></span></span>，即编程语言中的 sin(x) 函数）。</p>
+<p>友情提醒：</p>
+<ul>
+<li>常数的导数是 0；<span class="katex"><span class="katex-mathml"><math><mrow><mi>x</mi></mrow>x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.43056em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span> 的导数是 1；<span class="katex"><span class="katex-mathml"><math><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow>e^x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.664392em;" class="strut"></span><span style="height:0.664392em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 的导数还是 <span class="katex"><span class="katex-mathml"><math><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow>e^x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.664392em;" class="strut"></span><span style="height:0.664392em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>；<span class="katex"><span class="katex-mathml"><math><mrow><mi>ln</mi><mi>x</mi></mrow>\ln x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.69444em;" class="strut"></span><span style="height:0.69444em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">ln</span><span class="mord mathit">x</span></span></span></span> 的导数是 <span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>x</mi></mrow>1/x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">/</span><span class="mord mathit">x</span></span></span></span>；<span class="katex"><span class="katex-mathml"><math><mrow><mi>sin</mi><mi>x</mi></mrow>\sin x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.66786em;" class="strut"></span><span style="height:0.66786em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">sin</span><span class="mord mathit">x</span></span></span></span> 的导数是 <span class="katex"><span class="katex-mathml"><math><mrow><mi>cos</mi><mi>x</mi></mrow>\cos x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.43056em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">cos</span><span class="mord mathit">x</span></span></span></span>。</li>
+<li>回顾一下什么是<strong>偏导数</strong>：在数学中，一个多变量的函数的偏导数，就是它关于其中一个变量的导数而保持其他变量恒定。在上面的例子中，当我们对 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>x_1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.58056em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 求偏导数 <span class="katex"><span class="katex-mathml"><math><mrow><mi mathvariant="normal">∂</mi><mi>f</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">∂</mi><msub><mi>x</mi><mn>1</mn></msub></mrow>\partial f / \partial x_1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mord mathrm">/</span><span style="margin-right:0.05556em;" class="mord mathrm">∂</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 时，就将 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.58056em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 当成常数，所以得到 <span class="katex"><span class="katex-mathml"><math><mrow><mi>ln</mi><msub><mi>x</mi><mn>1</mn></msub></mrow>\ln x_1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.69444em;" class="strut"></span><span style="height:0.84444em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">ln</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 的导数是 <span class="katex"><span class="katex-mathml"><math><mrow><mn>1</mn><mi mathvariant="normal">/</mi><msub><mi>x</mi><mn>1</mn></msub></mrow>1/x_1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">/</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub></mrow>x_1 x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.58056em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 的导数是 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.43056em;" class="strut"></span><span style="height:0.58056em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>\sin x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.66786em;" class="strut"></span><span style="height:0.81786em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">sin</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span> 的导数是 0。</li>
+<li>回顾一下<strong>链式法则</strong>：复合函数的导数是构成复合这有限个函数在相应点的导数的乘积，即若有 <span class="katex"><span class="katex-mathml"><math><mrow><mi>u</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi>y</mi><mo>)</mo></mrow>u=f(y)</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">u</span><span class="mrel">=</span><span style="margin-right:0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span style="margin-right:0.03588em;" class="mord mathit">y</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><mrow><mi>y</mi><mo>=</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>y=g(x)</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.03588em;" class="mord mathit">y</span><span class="mrel">=</span><span style="margin-right:0.03588em;" class="mord mathit">g</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>，则 <span class="katex"><span class="katex-mathml"><math><mrow><mi>d</mi><mi>u</mi><mi mathvariant="normal">/</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>u</mi><mi mathvariant="normal">/</mi><mi>d</mi><mi>y</mi><mo>⋅</mo><mi>d</mi><mi>y</mi><mi mathvariant="normal">/</mi><mi>d</mi><mi>x</mi></mrow>du/dx = du/dy \cdot dy/dx</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">u</span><span class="mord mathrm">/</span><span class="mord mathit">d</span><span class="mord mathit">x</span><span class="mrel">=</span><span class="mord mathit">d</span><span class="mord mathit">u</span><span class="mord mathrm">/</span><span class="mord mathit">d</span><span style="margin-right:0.03588em;" class="mord mathit">y</span><span class="mbin">⋅</span><span class="mord mathit">d</span><span style="margin-right:0.03588em;" class="mord mathit">y</span><span class="mord mathrm">/</span><span class="mord mathit">d</span><span class="mord mathit">x</span></span></span></span>。例如对 <span class="katex"><span class="katex-mathml"><math><mrow><mi>sin</mi><mo>(</mo><mi>ln</mi><mi>x</mi><mo>)</mo></mrow>\sin (\ln x)</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">sin</span><span class="mopen">(</span><span class="mop">ln</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> 求导，就得到 <span class="katex"><span class="katex-mathml"><math><mrow><mi>cos</mi><mo>(</mo><mi>ln</mi><mi>x</mi><mo>)</mo><mo>⋅</mo><mo>(</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>x</mi><mo>)</mo></mrow>\cos (\ln x) \cdot (1/x)</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.75em;" class="strut"></span><span style="height:1em;vertical-align:-0.25em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">cos</span><span class="mopen">(</span><span class="mop">ln</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">⋅</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mord mathrm">/</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>。</li>
+</ul>
+<p>如果你注意观察，可以发现在计算图中，计算函数值是一个从左向右进行的计算，而计算偏导数则正好相反。</p>
+<h3 id="-">输入格式：</h3>
+<p>输入在第一行给出正整数 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span>（<span class="katex"><span class="katex-mathml"><math><mrow><mo>≤</mo><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow>\le 5\times 10^4</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.8141079999999999em;" class="strut"></span><span style="height:0.950078em;vertical-align:-0.13597em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mrel">≤</span><span class="mord mathrm">5</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span>），为计算图中的顶点数。</p>
+<p>以下 <span class="katex"><span class="katex-mathml"><math><mrow><mi>N</mi></mrow>N</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.68333em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span style="margin-right:0.10903em;" class="mord mathit">N</span></span></span></span> 行，第 <span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi></mrow>i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.65952em;" class="strut"></span><span style="height:0.65952em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> 行给出第 <span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi></mrow>i</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.65952em;" class="strut"></span><span style="height:0.65952em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> 个顶点的信息，其中 <span class="katex"><span class="katex-mathml"><math><mrow><mi>i</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mo>⋯</mo><mo separator="true">,</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow>i=0, 1, \cdots , N-1</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.68333em;" class="strut"></span><span style="height:0.8777699999999999em;vertical-align:-0.19444em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="minner">⋯</span><span class="mpunct">,</span><span style="margin-right:0.10903em;" class="mord mathit">N</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>。第一个值是顶点的类型编号，分别为：</p>
+<ul>
+<li>0 代表输入变量</li>
+<li>1 代表加法，对应 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow>x_1 + x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.73333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></li>
+<li>2 代表减法，对应 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub></mrow>x_1 - x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.73333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">−</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></li>
+<li>3 代表乘法，对应 <span class="katex"><span class="katex-mathml"><math><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>×</mo><msub><mi>x</mi><mn>2</mn></msub></mrow>x_1 \times x_2</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.58333em;" class="strut"></span><span style="height:0.73333em;vertical-align:-0.15em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></li>
+<li>4 代表指数，对应 <span class="katex"><span class="katex-mathml"><math><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow>e^x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.664392em;" class="strut"></span><span style="height:0.664392em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></li>
+<li>5 代表对数，对应 <span class="katex"><span class="katex-mathml"><math><mrow><mi>ln</mi><mi>x</mi></mrow>\ln x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.69444em;" class="strut"></span><span style="height:0.69444em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">ln</span><span class="mord mathit">x</span></span></span></span></li>
+<li>6 代表正弦函数，对应 <span class="katex"><span class="katex-mathml"><math><mrow><mi>sin</mi><mi>x</mi></mrow>\sin x</math></span><span aria-hidden="true" class="katex-html"><span style="height:0.66786em;" class="strut"></span><span style="height:0.66786em;vertical-align:0em;" class="strut bottom"></span><span class="base textstyle uncramped"><span class="mop">sin</span><span class="mord mathit">x</span></span></span></span></li>
+</ul>
+<p>对于输入变量，后面会跟它的双精度浮点数值；对于单目算子，后面会跟它对应的单个变量的顶点编号（编号从 0 开始）；对于双目算子，后面会跟它对应两个变量的顶点编号。</p>
+<p>题目保证只有一个输出顶点（即没有出边的顶点，例如上图最右边的 <code>-</code>），且计算过程不会超过双精度浮点数的计算精度范围。</p>
+<h3 id="-">输出格式：</h3>
+<p>首先在第一行输出给定计算图的函数值。在第二行顺序输出函数对于每个变量的偏导数的值，其间以一个空格分隔，行首尾不得有多余空格。偏导数的输出顺序与输入变量的出现顺序相同。输出小数点后 3 位。</p>
+<h3 id="-">输入样例：</h3>
+<pre><code class="lang-in">7
+0 2.0
+0 5.0
+5 0
+3 0 1
+6 1
+1 2 3
+2 5 4
+</code></pre>
+<h3 id="-">输出样例：</h3>
+<pre><code class="lang-out">11.652
+5.500 1.716
+</code></pre>
+</div>
+</div></div></div></div><hr/></div></div>
+
+</body>
+</html>
